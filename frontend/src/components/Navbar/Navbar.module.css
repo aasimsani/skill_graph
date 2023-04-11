@@ -1,0 +1,19 @@
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: #ffc107;
+	padding: 1em;
+
+}
+
+.logo {
+	color: white;
+
+}
+
+.access {
+	display: flex;
+	flex-direction: row;
+	gap: 24px;
+}

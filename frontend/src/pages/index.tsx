@@ -13,10 +13,10 @@ function Home() {
   return (
     <div>
       <Navbar />
-      <div>
+      <div className='text-white h-1'>
         Hero Header text
       </div>
-      <div>
+      <div className='text-white h-2'>
         Hero Sub-header text
       </div>
       <Button variant="warning" onClick={handleClick}>Get started</Button>

@@ -17,13 +17,13 @@
     "bootstrap": "^5.2.3",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
-    "firebase": "^9.19.1",
-    "firebaseui": "^6.0.2",
     "next": "13.3.0",
     "postcss": "8.4.21",
     "react": "18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
-    "typescript": "5.0.4"
+    "realm-web": "^2.0.0",
+    "typescript": "5.0.4",
+    "universal-cookie": "^4.0.4"
   }
 }

@@ -1,8 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Navbar from '@components/Navbar';
 import { useRouter } from "next/router"
-import { getAuth } from 'firebase/auth';
-import app from '@firebase/config';
 
 
 function Home() {

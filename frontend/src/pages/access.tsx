@@ -67,7 +67,7 @@ function LoginSignupForm({ handleForm, setEmail, headerText, error, errorMessage
 					<Form.Label>Email address</Form.Label>
 					<Form.Control onChange={(e) => setEmail(e.target.value)} required type="email" placeholder="Enter email" />
 					<Form.Text className="text-muted">
-						We'll never share your email with anyone else! We only need it so you can access your Skill graphs.
+						We will never share your email with anyone else! We only need it so you can access your Skill graphs.
 					</Form.Text>
 				</Form.Group>
 				<Button variant="warning" className="text-white" type="submit">

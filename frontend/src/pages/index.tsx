@@ -11,6 +11,7 @@ function Home() {
 
   }
   return (
+
     <div>
       <Navbar />
       <div className='text-white h-1'>

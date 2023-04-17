@@ -34,7 +34,10 @@
       ],
       "@realm/*": [
         "./src/realm/*"
-      ]
+      ],
+      "@utils/*": [
+        "./src/utils/*"
+      ],
     }
   },
   "include": [

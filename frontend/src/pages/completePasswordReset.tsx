@@ -3,7 +3,8 @@ import React from 'react';
 import { Card, Form, Button, Alert } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import app from '@realm/config';
-import Navbar from '@/components/Navbar';
+import Navbar from '@components/Navbar';
+import Link from 'next/link';
 
 function CompleteResetPassword() {
 
@@ -18,6 +19,17 @@ function CompleteResetPassword() {
 		e.preventDefault();
 		const token: string | string[] | undefined = router.query.token;
 		const tokenId: string | string[] | undefined = router.query.tokenId;
+		if (typeof token != "string") {
+			setError(true);
+			setErrorMessage('Invalid or expired reset link!');
+			return;
+		}
+		if (typeof tokenId != "string") {
+			setError(true);
+			setErrorMessage('Invalid or expired reset link!');
+			return;
+		}
+
 		if (!token || !tokenId) {
 			setError(true);
 			setErrorMessage('Invalid or expired reset link!');
@@ -32,8 +44,12 @@ function CompleteResetPassword() {
 		}
 
 		try {
-			if (typeof token === 'string' && typeof tokenId === 'string' && error === false) {
+			if (token && tokenId && error === false) {
 				await app.emailPasswordAuth.resetPassword({ password, token, tokenId })
+				setSuccess(true);
+			} else {
+				setError(true);
+				setErrorMessage('Something went wrong');
 			}
 		} catch (error) {
 			setError(true);
@@ -61,7 +77,7 @@ function CompleteResetPassword() {
 				}
 				{success &&
 					<Alert>
-						Password reset successful!
+						Password reset successful! <Link href="/login">Login here</Link>
 					</Alert>
 				}
 				<Form onSubmit={handleForm}>

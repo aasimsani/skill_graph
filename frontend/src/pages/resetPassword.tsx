@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Form, Button, Alert } from 'react-bootstrap';
 import app from '@realm/config';
-import Navbar from '@/components/Navbar';
+import Navbar from '@components/Navbar';
 
 function ResetPassword() {
 

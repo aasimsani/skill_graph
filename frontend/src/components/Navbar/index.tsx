@@ -34,32 +34,18 @@ function Navbar() {
 					</div>
 				</div>
 			)
-		} else {
-			return (
-				<div className={styles.navbar}>
-					<Link href="/"><div className={styles.logo}>SkillGraph</div></Link>
-					<div className={styles.access}>
-						<Link href={{ pathname: "/access", query: { page: "signup" } }}>Sign up</Link>
-						<Link href={{ pathname: "/access", query: { page: "login" } }}>Log in</Link>
-					</div>
-				</div>
-			)
 		}
-
-	} else {
-
-		return (
-			<div className={styles.navbar}>
-				<Link href="/"><div className={styles.logo}>SkillGraph</div></Link>
-				<div className={styles.access}>
-					<Link href={{ pathname: "/access", query: { page: "signup" } }}>Sign up</Link>
-					<Link href={{ pathname: "/access", query: { page: "login" } }}>Log in</Link>
-				</div>
-			</div>
-		)
-
 	}
+	return (
+		<div className={styles.navbar}>
+			<Link href="/"><div className={styles.logo}>SkillGraph</div></Link>
+			<div className={styles.access}>
+				<Link href="/signup">Sign up</Link>
+				<Link href="/login">Log in</Link>
+			</div>
+		</div>
+	)
 
 }
 
-export default Navbar
+export default Navbar;

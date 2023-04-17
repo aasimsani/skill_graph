@@ -26,7 +26,7 @@ function Navbar() {
 		if (user.isLoggedIn) {
 			return (
 				<div className={styles.navbar}>
-					<div className={styles.logo}>SkillGraph</div>
+					<Link href="/"><div className={styles.logo}>SkillGraph</div></Link>
 					<div className={styles.access}>
 						<Link href="/graphIndex">Your Graphs</Link>
 						<Link href="/createGraph">Create Graph</Link>
@@ -37,7 +37,7 @@ function Navbar() {
 		} else {
 			return (
 				<div className={styles.navbar}>
-					<div className={styles.logo}>SkillGraph</div>
+					<Link href="/"><div className={styles.logo}>SkillGraph</div></Link>
 					<div className={styles.access}>
 						<Link href={{ pathname: "/access", query: { page: "signup" } }}>Sign up</Link>
 						<Link href={{ pathname: "/access", query: { page: "login" } }}>Log in</Link>
@@ -50,7 +50,7 @@ function Navbar() {
 
 		return (
 			<div className={styles.navbar}>
-				<div className={styles.logo}>SkillGraph</div>
+				<Link href="/"><div className={styles.logo}>SkillGraph</div></Link>
 				<div className={styles.access}>
 					<Link href={{ pathname: "/access", query: { page: "signup" } }}>Sign up</Link>
 					<Link href={{ pathname: "/access", query: { page: "login" } }}>Log in</Link>
